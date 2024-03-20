@@ -12,9 +12,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh """
-                    curl -u "<varadharajan>:<Fortuner@98>" -T 'target/*.war' 'http://http://localhost:8082/manager/text/deploy?path=<http://localhost:8082/javaee-webapp/HelloWorld>&update=true'
-                """
+                sh "curl -u varadharajan:Fortuner@98 -T 'target/*.war' 'http://localhost:8082/manager/text/deploy?path=/javaee-webapp/HelloWorld&update=true'"
             }
         }
     }
